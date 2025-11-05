@@ -69,6 +69,7 @@ python -m etl.main --since 2025-10-15 --load
 ```
 you will find the transformed data stored in the local database app.db under the table expenses_clean.
 ## 🧪 Example Log Output
+```
 Extracted 4 rows from data/expenses.csv
         date       amount        description
 0  2025-10-14     12.3        Bus ticket
@@ -81,7 +82,7 @@ Extracted 4 rows from data/expenses.csv
 💡 Use --load to save to SQLite.
 2025-11-05 21:06:49,808 - INFO - Data successfully loaded into database.
 2025-11-05 21:06:49,808 - INFO - ETL process finished.
-
+```
 ## Future Improvements
 
 - Validation for missing/invalid data
