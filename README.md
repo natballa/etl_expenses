@@ -61,6 +61,27 @@ Result:
 2025-10-16 | 12.3 | Bus ticket | Transport
 2025-10-16 | 1500 | Rent | Housing
 ```
+
+## ✅ Result
+After running:
+```
+python -m etl.main --since 2025-10-15 --load
+```
+you will find the transformed data stored in the local database app.db under the table expenses_clean.
+## 🧪 Example Log Output
+Extracted 4 rows from data/expenses.csv
+        date       amount        description
+0  2025-10-14     12.3        Bus ticket
+1  2025-10-15     45.6        Restaurant dinner
+2  2025-10-16     12.3        Bus ticket
+3  2025-10-16   1500.0        Rent
+
+2025-11-05 21:06:49,806 - INFO - Extracted 4 rows.
+2025-11-05 21:06:49,808 - INFO - Transformed 4 rows.
+💡 Use --load to save to SQLite.
+2025-11-05 21:06:49,808 - INFO - Data successfully loaded into database.
+2025-11-05 21:06:49,808 - INFO - ETL process finished.
+
 ## Future Improvements
 
 - Validation for missing/invalid data
